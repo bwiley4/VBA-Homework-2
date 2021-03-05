@@ -1,8 +1,6 @@
 Sub stock():
 
     ' Code for VBA Homework
-    
-    ' Set the dimensions
     Dim total As Double
     Dim change As Double
     Dim i As Long
@@ -98,14 +96,12 @@ Sub stock():
 
         End If
 
-    Next i
+       Next i
 
     ' take the max and min and place them in a separate section
     Range("Q2") = "%" & WorksheetFunction.Max(Range("K2:K" & rowCount)) * 100
     Range("Q3") = "%" & WorksheetFunction.Min(Range("K2:K" & rowCount)) * 100
     Range("Q4") = WorksheetFunction.Max(Range("L2:L" & rowCount))
-
-    
     increase_number = WorksheetFunction.Match(WorksheetFunction.Max(Range("K2:K" & rowCount)), Range("K2:K" & rowCount), 0)
     decrease_number = WorksheetFunction.Match(WorksheetFunction.Min(Range("K2:K" & rowCount)), Range("K2:K" & rowCount), 0)
     volume_number = WorksheetFunction.Match(WorksheetFunction.Max(Range("L2:L" & rowCount)), Range("L2:L" & rowCount), 0)
